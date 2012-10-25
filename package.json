@@ -1,0 +1,21 @@
+{
+  "author": "Shotokan <shotokanzh+nodejs@gmail.com>",
+  "name": "WhatsApp Checker",
+  "description": "Simple WhatsApp Checker",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ShotokanZH/WhatsAppChecker.git"
+  },
+  "engines": {
+    "node": "~v0.4.9"
+  },
+  "dependencies": {
+    "express": "",
+    "mu2": "",
+    "http": "",
+    "crypto": "",
+    "xml2js": ""
+  },
+  "devDependencies": {}
+}
