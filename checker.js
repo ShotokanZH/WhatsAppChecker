@@ -18,7 +18,11 @@ function renderPage(res, variables) {
 }
 
 app.get('/*', function(req, res) {
-	renderPage(res,{title: title+' WAITING', description: 'Insert data below to check if the user exists in WhatsApp servers.', defaultcc: 39});
+	renderPage(res,{
+		title: title+' WAITING',
+		description: 'Insert data below to check if the user exists in WhatsApp servers.',
+		defaultcc: 39
+	});
 });
 
 app.post('/*', function(req, res) {
@@ -42,9 +46,17 @@ app.post('/*', function(req, res) {
 
 			parser.parseString(d, function(err, result) {
 				if(result['exist']['response'][0]['$']['status']=='fail') //does not use WhatsApp
-					renderPage(res,{title: title+' EXECUTED', useswa: 'The user +'+cc+''+telephone+' ('+imei+') [calculated pw: '+password+'] does *NOT* use WhatsApp', defaultcc: 39});
+					renderPage(res,{
+						title: title+' EXECUTED',
+						useswa: 'The user +'+cc+''+telephone+' ('+imei+') [calculated pw: '+password+'] does *NOT* use WhatsApp',
+						defaultcc: 39
+					});
 				else //WhatsApp!!
-					renderPage(res,{title: title+' EXECUTED', useswa: 'The user +'+cc+''+telephone+' ('+imei+') [calculated pw: '+password+'] does use WhatsApp', defaultcc: 39});
+					renderPage(res,{
+						title: title+' EXECUTED',
+						useswa: 'The user +'+cc+''+telephone+' ('+imei+') [calculated pw: '+password+'] does use WhatsApp',
+						defaultcc: 39
+					});
 			});
 			
 		});
