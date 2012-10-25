@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "express": "",
-    "mu2": "",
     "http": "",
     "crypto": "",
-    "xml2js": ""
+    "xml2js": "",
+    "jade": "*"
   },
   "devDependencies": {}
 }

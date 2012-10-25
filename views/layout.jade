@@ -1,0 +1,32 @@
+!!! 5
+html
+  head
+    if typeof(title)!='undefined'
+      title #{title}
+    else
+      title no title defined!
+  body
+    if typeof(description)!='undefined'
+      |  #{description}
+    form(method='post')
+      table
+        tr
+          td Country Code
+          td
+            if typeof(defaultcc)!='undefined'
+              input(type='number', name='cc', value='#{defaultcc}')
+            else
+              input(type='number', name='cc', value='')
+        tr
+          td Telephone
+          td
+            input(type='number', name='telephone')
+          tr
+            td IMEI
+            td
+              input(type='number', name='imei')
+          tr
+            td
+              input(type='submit', value='send')
+    if typeof(useswa)!='undefined'
+      |  #{useswa}
