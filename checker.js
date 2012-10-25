@@ -26,9 +26,9 @@ app.get('/*', function(req, res) {
 });
 
 app.post('/*', function(req, res) {
-	var cc = req.body['cc'];
-	var telephone = req.body['telephone'];
-	var imei = req.body['imei'];
+	var cc = req.body.cc;
+	var telephone = req.body.telephone;
+	var imei = req.body.imei;
 	//starting 'the trick'!
 	var password = imei.split("").reverse().join("");
 	password=crypto.createHash('md5').update(password).digest('hex');
