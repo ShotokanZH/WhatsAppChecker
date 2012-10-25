@@ -33,7 +33,7 @@ exports.wauser = function(req, res) {
       var parser = new xml2js.Parser();
 
       parser.parseString(d, function(err, result) {
-        if(result['exist']['response'][0]['$']['status']=='fail') //does not use WhatsApp
+        if(result.exist.response[0].$.status=='fail') //does not use WhatsApp
           res.render('layout',{
             title: title+' EXECUTED',
             useswa: 'The user +'+cc+''+telephone+' ('+imei+') [calculated pw: '+password+'] does *NOT* use WhatsApp',
